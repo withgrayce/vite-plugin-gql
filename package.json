@@ -8,10 +8,10 @@
     "import": "./dist/index.mjs",
     "require": "./dist/index.js"
   },
-  "author": "aub",
+  "author": "Aubrey Holland",
   "repository": {
     "type": "git",
-    "url": "git@github.com:aub/vite-plugin-gql.git"
+    "url": "git@github.com:withgrayce/vite-plugin-gql.git"
   },
   "license": "MIT",
   "scripts": {
