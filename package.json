@@ -1,0 +1,51 @@
+{
+  "name": "vite-plugin-gql",
+  "version": "0.1.2",
+  "description": "Vite plugin for loading GraphQL files",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
+  "author": "aub",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aub/vite-plugin-gql.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "dev": "npm run bundle --watch",
+    "build": "npm run clean && npm run bundle",
+    "bundle": "tsup src/index.ts --sourcemap --dts --format cjs,esm",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "graphql-tag": "^2.12.6"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/globrex": "^0.1.0",
+    "@types/node": "^14.0.27",
+    "esbuild": "^0.11.12",
+    "klona": "^2.0.4",
+    "prettier": "^2.0.5",
+    "rollup": "^2.45.2",
+    "tsup": "^4.10.1",
+    "typescript": "^4.2.4",
+    "vite": "*"
+  },
+  "peerDependencies": {
+    "vite": ">2.0.0-0"
+  },
+  "keywords": [
+    "vite",
+    "resolver",
+    "graphql"
+  ],
+  "files": [
+    "src",
+    "dist"
+  ]
+}
